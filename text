@@ -1,0 +1,15 @@
+telex_event_notifier/
+│── main.py               # FastAPI app entry point
+│── repositories/
+│   ├── event_repository.py  # Handles Eventbrite API interactions
+│── services/
+│   ├── event_service.py  # Business logic for fetching and formatting events
+│── models/
+│   ├── event_model.py    # Pydantic models for validation
+│── config.py             # App configurations (API keys, settings)
+│── .env                  # API keys (ignored in Git)
+│── requirements.txt      # Dependencies
+
+
+
+# Fetches local events based on chosen city  or location and posts updates on the Telex channel
