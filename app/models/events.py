@@ -20,6 +20,5 @@ class Event(BaseModel):
 
 class EventRequest(BaseModel):
     city: Optional[str] = None
-    dma_id: Optional[str] = None
     category: Optional[str] = None
     limit: int = 5

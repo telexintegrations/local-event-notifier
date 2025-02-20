@@ -1,16 +1,16 @@
 import logging
-import httpx  # For making HTTP requests
+import httpx
 from app.repositories.events import EventRepository
 from app.models.events import Event
-from app.config import Config  # Import Telex Webhook URL
+from app.config import Config
 
 logger = logging.getLogger(__name__)
 
 class EventService:
     @staticmethod
-    async def get_formatted_events(city: str = None, dma_id: str = None, category: str = None, limit: int = 5):
-        logger.info(f"Fetching events for city={city}, dma_id={dma_id}, category={category}")
-        events = await EventRepository.fetch_events(city, dma_id, category, limit)
+    async def get_formatted_events(city: str = None, category: str = None, limit: int = 5):
+        logger.info(f"Fetching events for city={city}, category={category}")
+        events = await EventRepository.fetch_events(city, category, limit)
 
         if not events:
             logger.warning("No events found")
@@ -28,14 +28,16 @@ class EventService:
 
         logger.info(f"Successfully fetched {len(formatted_events)} events")
 
-        # 🔥 Send events to Telex
+        # Send events to Telex
         await EventService.send_to_telex(formatted_events)
 
         return formatted_events
 
     @staticmethod
     async def send_to_telex(events):
-        """Send event data to Telex webhook"""
+        """
+        Send event data to Telex webhook
+        """
         if not Config.TELEX_WEBHOOK_URL:
             logger.error("Telex webhook URL is not configured!")
             return

@@ -1,6 +1,6 @@
 import aiohttp
 import logging
-from app.config import  Config
+from app.config import Config
 
 api_key = Config.TICKET_MASTER_API_KEY
 api_url = Config.TICKET_MASTER_API_URL
@@ -12,7 +12,7 @@ class EventRepository:
     """
 
     @staticmethod
-    async def fetch_events(city: str = None, dma_id: str = None, category: str = None, limit: int = 5):
+    async def fetch_events(city: str = None, category: str = None, limit: int = 5):
         params = {
             "apikey": api_key,
             "size": limit,
@@ -20,8 +20,6 @@ class EventRepository:
         }
         if city:
             params["city"] = city
-        if dma_id:
-            params["dmaId"] = dma_id
         if category:
             params["classificationName"] = category
 
