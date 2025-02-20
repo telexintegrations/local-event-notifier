@@ -16,6 +16,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def get_home():
+    return "Welcome to Local Event Notifier"
+
 app.openapi = OpenApiDocumentation(app).custom_openapi  # type: ignore
 app.include_router(api_router, prefix="/api")
 

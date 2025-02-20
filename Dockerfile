@@ -28,10 +28,10 @@ COPY ./pyproject.toml ./poetry.lock* ./Makefile /app/
 RUN poetry config virtualenvs.create false && poetry install --no-root --no-interaction --no-ansi
 
 # Copy the source code into the container
-COPY ./app /
+COPY ./app /app/
 
 # Set Python path (optional)
 ENV PYTHONPATH=/app
 
 # Set the command to run the application (with default settings)
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
