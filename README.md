@@ -162,5 +162,11 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
     "status": "success"
    }
   ```
-  **Response2**: On  the telex'x UI, the response look like:
+  **Response2**: On  the telex  UI, the response look like:
   ![alt text](<Screenshot 2025-02-21 at 17.13.42.png>)
+
+## Tests
+To run  unit tests locally
+```shell
+pytest
+```
