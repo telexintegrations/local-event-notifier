@@ -19,7 +19,7 @@ async def get_events(
 ):
     return await EventService.get_formatted_events(city, category, limit)
 
-@router.get("/integration")
+@router.get("/integration.json")
 async def get_integration_json():
     return integration_json
 

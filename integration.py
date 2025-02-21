@@ -7,7 +7,7 @@ integration_json={
     "descriptions": {
       "app_description": "Fetches local events based on chosen city or location and posts updates on the Telex channel",
       "app_logo": "https://my-portfolio-343207.web.app/MyLogo2.png",
-      "app_name": "Local event Notifier.",
+      "app_name": "Local event Notifier",
       "app_url": "URL to the application or service.", 
       "background_color": "#ffffff",
     },
@@ -41,7 +41,7 @@ integration_json={
         "label": "interval",
         "type": "text",
         "required": True,
-        "default": "* * * * *"
+        "default": "*/5 * * * *"
       },
       {
         "label": "location",
