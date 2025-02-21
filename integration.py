@@ -9,7 +9,7 @@ integration_json={
       "app_logo": "https://my-portfolio-343207.web.app/MyLogo2.png",
       "app_name": "Local event Notifier.",
       "app_url": "URL to the application or service.", 
-      "background_color": "#HEXCODE"
+      "background_color": "#000000",
     },
     "integration_category": "Social Media Management",
     "integration_type": "interval",
