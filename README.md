@@ -14,7 +14,9 @@ Before you begin, ensure you have the following installed on your machine:
 - [Docker](https://www.docker.com/)
 - [Poetry ](https://python-poetry.org/)
 - [Make](https://makefiletutorial.com/)
-- [Pre-commit](https://pre-commit.com/)(for managing hooks) 
+- [Pre-commit](https://pre-commit.com/)(for managing hooks)
+- [Pytest](https://docs.pytest.org/en/stable/)- Testing framework
+
 
 ### Getting Started Installation & Local setup
 Clone the repository
