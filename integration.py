@@ -65,7 +65,7 @@ integration_json={
       }
  
     ],
-    "tick_url": "https://local-event-notifier.vercel.app/api/tick",
+    "tick_url": "https://local-event-notifier.onrender.com/api/tick",
     "target_url": "https://ping.telex.im/v1/webhooks/01951fa7-6d0e-753d-ba67-e9ea376bcce4"
   }
 }
