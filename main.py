@@ -1,9 +1,9 @@
+import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.routes import api_router
-from app.api.openapi import OpenApiDocumentation
-import uvicorn
 
+from app.api.openapi import OpenApiDocumentation
+from app.api.routes import api_router
 
 app = FastAPI(
     title="local-event-notifier",
@@ -16,9 +16,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/")
 def get_home():
     return "Welcome to Local Event Notifier"
+
 
 app.openapi = OpenApiDocumentation(app).custom_openapi  # type: ignore
 app.include_router(api_router, prefix="/api")
