@@ -21,7 +21,7 @@ Before you begin, ensure you have the following installed on your machine:
 ### Getting Started Installation & Local setup
 Clone the repository
  ```shell
- git clone https://github.com/Marlinekhavele/local-event-notifier
+ git clone https://github.com/telexintegrations/local-event-notifier
 
  cd local-event-notifier
  ```
