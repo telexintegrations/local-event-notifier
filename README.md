@@ -71,7 +71,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 ## Endpoints
 
-- **URL**: `/integration.json`
+- **URL**: `api/integration.json`
 - **Method**: `GET`
 - **Body**: No body but a QUERY in form of an integer should be passed
 - **Response**:
@@ -152,7 +152,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
     }
   ```
-- **URL**: `/tick` 
+- **URL**: `api/tick` 
 - **Method**: `POST`
 - **Body**:
 ```json
