@@ -154,8 +154,34 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
   ```
 - **URL**: `/tick` 
 - **Method**: `POST`
-- **Body**: 
-- **Response1**:
+- **Body**:
+```json
+{
+  "channel_id": "string",
+  "return_url": "string",
+  "settings": [
+    {
+      "label": "city",
+      "type": "string",
+      "required": true,
+      "default": "Berlin"
+    },
+ {
+      "label": "category",
+      "type": "string",
+      "required": true,
+      "default": "Music"
+    },
+ {
+      "label": "limit",
+      "type": "string",
+      "required": true,
+      "default": "10"
+    }
+  ]
+}
+```
+- **Response**:
   ```json
    {
     "message": "[{'title': 'Cage The Elephant - Europe 2025', 'url': 'https://www.ticketmaster.de/event/cage-the-elephant-europe-2025-tickets/1476430159?language=en-us', 'start_time': '2025-02-21', 'venue': 'TBA'}, {'title': 'Gracie Abrams: The Secret of Us Tour', 'url': 'https://www.ticketmaster.de/event/gracie-abrams-the-secret-of-us-tour-tickets/548575?language=en-us', 'start_time': '2025-02-22', 'venue': 'TBA'}, {'title': 'Gracie Abrams: The Secret of Us Tour | VIP Packages', 'url': 'https://www.ticketmaster.de/event/gracie-abrams-the-secret-of-us-tour-%7C-vip-packages-tickets/548693?language=en-us', 'start_time': '2025-02-22', 'venue': 'TBA'}, {'title': 'Teddy Swims - I’ve Tried Everything But Therapy Tour', 'url': 'https://www.ticketmaster.de/event/teddy-swims-ive-tried-everything-but-therapy-tour-tickets/552817?language=en-us', 'start_time': '2025-02-23', 'venue': 'TBA'}, {'title': \"Teddy Swims: I've Tried Everything But Therapy | VIP Tour Package\", 'url': 'https://www.ticketmaster.de/event/teddy-swims-ive-tried-everything-but-therapy-%7C-vip-tour-package-tickets/552893?language=en-us', 'start_time': '2025-02-23', 'venue': 'TBA'}, {'title': 'Lexa Gates - The Elite Vessel Tour', 'url': 'https://www.ticketmaster.de/event/lexa-gates-the-elite-vessel-tour-tickets/555771?language=en-us', 'start_time': '2025-02-23', 'venue': 'TBA'}, {'title': 'Oscar and the Wolf', 'url': 'https://www.ticketmaster.de/event/oscar-and-the-wolf-tickets/553845?language=en-us', 'start_time': '2025-02-23', 'venue': 'TBA'}, {'title': 'Oscar and the Wolf | Merch Upgrade (no Ticket)', 'url': 'https://www.ticketmaster.de/event/oscar-and-the-wolf-%7C-merch-upgrade-no-ticket--tickets/553871?language=en-us', 'start_time': '2025-02-23', 'venue': 'TBA'}, {'title': 'ericdoa - europe tour 2025', 'url': 'https://www.ticketmaster.de/event/ericdoa-europe-tour-2025-tickets/845240353?language=en-us', 'start_time': '2025-02-23', 'venue': 'TBA'}, {'title': 'Franz Ferdinand - UK / European Tour 2025', 'url': 'https://www.ticketmaster.de/event/franz-ferdinand-uk-european-tour-2025-tickets/552335?language=en-us', 'start_time': '2025-02-24', 'venue': 'TBA'}]",
